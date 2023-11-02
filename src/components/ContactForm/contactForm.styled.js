@@ -14,8 +14,7 @@ export const Button = styled.button`
   min-width: 118px;
   height: 49px;
   background-color: white;
-  margin-top: 50px;
-  margin-left: 417px;
+  margin-top: 106px;
   border-radius: 60px;
   border-color: black;
   border: none;
@@ -31,7 +30,7 @@ export const Button = styled.button`
 `;
 
 export const LabelStyled = styled.label`
-  padding-left: 30px;
+  padding-left: 14px;
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: bold;
@@ -42,4 +41,8 @@ export const LabelStyled = styled.label`
     margin-left: 5px;
     border-radius: 10%;
   }
+`;
+
+export const Form = styled.form`
+  color: white;
 `;

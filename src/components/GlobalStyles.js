@@ -1,14 +1,13 @@
-@import-normalize;
+import { createGlobalStyle } from 'styled-components';
 
-/* bring in normalize.css styles */
+import 'modern-normalize';
+
+export const Globalstyles = createGlobalStyle`
 :root {
   --main-color: #dee873;
 }
 
 body {
-  background-image: url(./Images/Без\ названия.png);
-  background-repeat: no-repeat;
-  background-position-y: 2rem;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -21,3 +20,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+`;

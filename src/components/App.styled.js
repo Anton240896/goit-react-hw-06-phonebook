@@ -2,17 +2,17 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 563px;
-  margin-top: 132px;
+  margin-top: -381px;
   min-height: 100px;
-  margin-left: 600px;
+  margin-left: 384px;
   margin-right: auto;
   background-color: #dee873;
   border-radius: 10%;
 
   svg {
     position: absolute;
-    top: 240px;
-    left: 620px;
+    top: 196px;
+    left: 636px;
   }
 `;
 
@@ -31,4 +31,12 @@ export const Contacts = styled.h3`
 export const PhonebookName = styled.h2`
   text-align: center;
   margin-right: -44px;
+`;
+
+export const Main = styled.main`
+  min-width: 1350px;
+`;
+
+export const SectionAll = styled.div`
+  margin-left: 215px;
 `;

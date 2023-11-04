@@ -9,7 +9,6 @@ import {
   PhonebookName,
   Contacts,
   Main,
-  SectionAll,
 } from './App.styled';
 
 import { VscNotebook } from 'react-icons/vsc';
@@ -18,7 +17,7 @@ import { VscNotebook } from 'react-icons/vsc';
 export const App = () => {
   return (
     <Main>
-      <SectionAll>
+      <section>
         <VscNotebook size={400} style={{ marginTop: '60px' }} />
         <Container>
           <PhonebookName>Phonebook</PhonebookName>
@@ -31,7 +30,7 @@ export const App = () => {
 
           <ContactList />
         </Container>
-      </SectionAll>
+      </section>
     </Main>
   );
 };

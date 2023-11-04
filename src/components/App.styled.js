@@ -11,7 +11,7 @@ export const Container = styled.section`
   svg {
     position: absolute;
     top: 100px;
-    left: 936px;
+    left: 795px;
   }
 `;
 
@@ -34,8 +34,4 @@ export const PhonebookName = styled.h2`
 
 export const Main = styled.main`
   min-width: 1350px;
-`;
-
-export const SectionAll = styled.div`
-  margin-left: 215px;
 `;

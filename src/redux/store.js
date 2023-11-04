@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { contactsReducer } from './contactsSlice';
+import { contactsReducer } from './contactSlice';
 import { filterReducer } from './filterSlice';
 // import { addContact, deleteContact } from '.redux/contactSlice';
 // import { createStore, combineReducers } from 'redux';
@@ -13,16 +13,16 @@ export const store = configureStore({
   },
 });
 
-/*======== REDUX =======*/
-// const initialState = {
-//   contacts: [],
-//   filter: '',
-// };
-/*======== ROOT REDUCER =======*/
-// const rootReducer = combineReducers({
-//   contacts: contactReducer,
-//   filter: filterReducer,
-// });
+// /*======== REDUX =======*/
+// // const initialState = {
+// //   contacts: [],
+// //   filter: '',
+// // };
+// /*======== ROOT REDUCER =======*/
+// // const rootReducer = combineReducers({
+// //   contacts: contactReducer,
+// //   filter: filterReducer,
+// // });
 
-// /*======== CONNECTIONS DEVTOOLS TO REDUX =======*/
-// const enhancer = devToolsEnhancer();
+// // /*======== CONNECTIONS DEVTOOLS TO REDUX =======*/
+// // const enhancer = devToolsEnhancer();

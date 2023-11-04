@@ -1,5 +1,6 @@
 import React from 'react';
-import { ContactForm } from 'components/ContactForm/contactForm';
+
+import { ContactsForm } from 'components/ContactForm/contactForm';
 import { ContactList } from 'components/ContactList/contactList';
 import { Filter } from 'components/Filter/filter';
 import {
@@ -21,7 +22,7 @@ export const App = () => {
         <VscNotebook size={400} style={{}} />
         <Container>
           <PhonebookName>Phonebook</PhonebookName>
-          <ContactForm />
+          <ContactsForm />
 
           <ContactFilter>
             <Contacts>Contacts</Contacts>

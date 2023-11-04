@@ -1,8 +1,21 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { setFilter } from 'redux/filterSlice';
+
 export const Filter = ({ value, onChange }) => {
+  const dispatch = useDispatch();
+  const filter = useSelector(state => state.filter.filter);
+
+  const handleFilterChange = filter => dispatch(setFilter(filter));
+
   return (
     <label>
       Find contacts:
-      <input type="text" name="filter" value={value} onChange={onChange} />
+      <input
+        type="text"
+        name="filter"
+        value={filter}
+        onChange={handleFilterChange}
+      />
     </label>
   );
 };

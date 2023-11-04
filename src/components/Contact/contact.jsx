@@ -1,12 +1,17 @@
 import { ContactContainer, ContactName } from './contact.styled';
 
-export const Contact = ({ id, name, phone, deleteContact }) => {
+import { useDispatch } from 'react-redux';
+import { deleteContact } from 'redux/contactSlice';
+
+export const Contact = ({ id, name, phone }) => {
+  const dispatch = useDispatch();
+
   return (
     <ContactContainer>
       <ContactName>
         {name}: {phone}
       </ContactName>
-      <button type="button" onClick={() => deleteContact(id)}>
+      <button type="button" onClick={() => dispatch(deleteContact(id))}>
         Delete
       </button>
     </ContactContainer>

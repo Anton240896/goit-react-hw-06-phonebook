@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 563px;
-  margin-top: -381px;
-  min-height: 100px;
+  margin-top: -445px;
   margin-left: 384px;
   margin-right: auto;
   background-color: #dee873;
@@ -11,8 +10,8 @@ export const Container = styled.section`
 
   svg {
     position: absolute;
-    top: 196px;
-    left: 636px;
+    top: 100px;
+    left: 936px;
   }
 `;
 

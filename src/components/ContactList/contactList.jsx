@@ -3,18 +3,18 @@ import { ContactListStyled } from './contactList.styled';
 import { useSelector } from 'react-redux';
 
 export const ContactList = () => {
-  const contacts = useSelector(state => state.contact);
-  const filter = useSelector(state => state.filter);
+  const contacts = useSelector(state => state.contacts);
+  const filter = useSelector(state => state.filter.filter);
 
   const filterContacts = () => {
-    contacts.filter(contact =>
+    return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
   };
 
   return (
     <ContactListStyled>
-      {filterContacts.map(({ name, number, id }) => {
+      {filterContacts().map(({ name, number, id }) => {
         return <Contact key={id} id={id} name={name} number={number} />;
       })}
     </ContactListStyled>

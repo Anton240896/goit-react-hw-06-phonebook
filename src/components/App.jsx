@@ -19,7 +19,7 @@ export const App = () => {
   return (
     <Main>
       <SectionAll>
-        <VscNotebook size={400} style={{}} />
+        <VscNotebook size={400} style={{ marginTop: '60px' }} />
         <Container>
           <PhonebookName>Phonebook</PhonebookName>
           <ContactsForm />

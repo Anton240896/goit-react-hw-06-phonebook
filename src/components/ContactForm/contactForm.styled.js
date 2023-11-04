@@ -15,6 +15,7 @@ export const Button = styled.button`
   height: 49px;
   background-color: white;
   margin-top: 106px;
+  margin-left: 224px;
   border-radius: 60px;
   border-color: black;
   border: none;
@@ -30,7 +31,7 @@ export const Button = styled.button`
 `;
 
 export const LabelStyled = styled.label`
-  padding-left: 14px;
+  padding-left: 80px;
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: bold;
@@ -38,11 +39,16 @@ export const LabelStyled = styled.label`
   input {
     display: block;
     width: 167px;
-    margin-left: 5px;
+    margin-left: 29px;
     border-radius: 10%;
   }
 `;
 
 export const Form = styled.form`
   color: white;
+`;
+
+export const Input = styled.input`
+  padding: 10px;
+  border: 30px;
 `;

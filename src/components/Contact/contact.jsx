@@ -3,13 +3,13 @@ import { ContactContainer, ContactName } from './contact.styled';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactSlice';
 
-export const Contact = ({ id, name, phone }) => {
+export const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
 
   return (
     <ContactContainer>
-      <ContactName>
-        {name}: {phone}
+      <ContactName key={id}>
+        {name}: {number}
       </ContactName>
       <button type="button" onClick={() => dispatch(deleteContact(id))}>
         Delete
@@ -17,3 +17,5 @@ export const Contact = ({ id, name, phone }) => {
     </ContactContainer>
   );
 };
+
+console.log();

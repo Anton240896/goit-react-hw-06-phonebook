@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactSlice';
-import { Button } from './contactForm.styled';
+import { Button, LabelStyled, Input } from './contactForm.styled';
 import { HiPhoneOutgoing } from 'react-icons/hi';
 // import { Formik, Form, Field } from 'formik';
 // import * as Yup from 'yup';
@@ -22,7 +22,15 @@ export const ContactsForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <HiPhoneOutgoing size={100} />
-      <input type="text" name="text" placeholder="Enter task text..." />
+      <LabelStyled>
+        Name
+        <Input type="text" name="text" placeholder="Enter task text..." />
+      </LabelStyled>
+
+      <LabelStyled>
+        Phone
+        <Input type="text" name="text" placeholder="Enter task text..." />
+      </LabelStyled>
       <Button type="submit">Add contact</Button>
     </form>
   );

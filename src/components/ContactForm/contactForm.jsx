@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { useDispatch } from 'react-redux';
+// import { useState } from 'react';
+
 import { addContact } from 'redux/contactSlice';
 import { Button, LabelStyled, Input } from './contactForm.styled';
 import { HiPhoneOutgoing } from 'react-icons/hi';
@@ -12,30 +14,37 @@ import { HiPhoneOutgoing } from 'react-icons/hi';
 export const ContactsForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    const form = event.target;
-    dispatch(addContact(form.elements.text.value));
+  // const [name, setName] = useState('');
+  // const [number, setNumber] = useState('');
+
+  const handleSubmit = evt => {
+    evt.preventDefault();
+    const form = evt.target;
+    const contact = {
+      name,
+      number,
+      id: nanoid(),
+    };
+    dispatch(addContact(contact));
     form.reset();
+
+    return (
+      <form onSubmit={handleSubmit}>
+        <HiPhoneOutgoing size={100} />
+        <LabelStyled>
+          Name
+          <Input type="text" name="text" placeholder="Enter task text..." />
+        </LabelStyled>
+
+        <LabelStyled>
+          Phone
+          <Input type="text" name="text" placeholder="Enter task text..." />
+        </LabelStyled>
+        <Button type="submit">Add contact</Button>
+      </form>
+    );
   };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <HiPhoneOutgoing size={100} />
-      <LabelStyled>
-        Name
-        <Input type="text" name="text" placeholder="Enter task text..." />
-      </LabelStyled>
-
-      <LabelStyled>
-        Phone
-        <Input type="text" name="text" placeholder="Enter task text..." />
-      </LabelStyled>
-      <Button type="submit">Add contact</Button>
-    </form>
-  );
 };
-
 // solution 2 with library Formic
 
 // const PhoneBookSchema = Yup.object().shape({
@@ -76,4 +85,3 @@ export const ContactsForm = () => {
 //       )}
 //     </Formik>
 //   );
-// };

@@ -5,8 +5,6 @@ export const Filter = ({ value, onChange }) => {
   const dispatch = useDispatch();
   const filter = useSelector(state => state.filter.filter);
 
-  const handleFilterChange = filter => dispatch(setFilter(filter));
-
   return (
     <label>
       Find contacts:
@@ -14,7 +12,7 @@ export const Filter = ({ value, onChange }) => {
         type="text"
         name="filter"
         value={filter}
-        onChange={handleFilterChange}
+        onChange={evt => dispatch(setFilter(evt.target.value))}
       />
     </label>
   );

@@ -71,7 +71,7 @@ export const ContactForm = () => {
       validationSchema={PhoneBookSchema}
       onSubmit={(values, actions) => {
         actions.resetForm();
-        if (!contacts.find(item => item.name === values.name)) {
+        if (!contacts.find(contact => contact.name === values.name)) {
           dispatch(addContact(values));
         } else {
           console.log(`${values.name} is already in contacts`);

@@ -15,7 +15,7 @@ export const Button = styled.button`
   height: 49px;
   background-color: white;
   margin-top: 106px;
-  margin-left: 224px;
+  margin-left: 382px;
   border-radius: 60px;
   border-color: black;
   border: none;

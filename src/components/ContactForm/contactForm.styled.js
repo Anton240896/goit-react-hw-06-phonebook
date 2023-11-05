@@ -31,7 +31,7 @@ export const Button = styled.button`
 `;
 
 export const LabelStyled = styled.label`
-  padding-left: 80px;
+  padding-left: 11px;
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: bold;

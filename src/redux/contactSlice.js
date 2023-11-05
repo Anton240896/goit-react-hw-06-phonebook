@@ -15,14 +15,15 @@ const contactsSlice = createSlice({
       reducer(state, action) {
         state.push(action.payload);
       },
-      prepare(contacts) {
-        return {
-          payload: {
-            ...contacts,
-            id: nanoid(),
-          },
-        };
-      },
+      prepare: contact => ({ payload: { ...contact, id: nanoid() } }),
+      // prepare(contacts) {
+      //   return {
+      //     payload: {
+      //       ...contacts,
+      //       id: nanoid(),
+      //     },
+      //   };
+      // },
     },
     deleteContact(state, action) {
       const index = state.findIndex(contact => contact.id === action.payload);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ContactsForm } from 'components/ContactForm/contactForm';
+import { ContactForm } from 'components/ContactForm/contactForm';
 import { ContactList } from 'components/ContactList/contactList';
 import { Filter } from 'components/Filter/filter';
 import {
@@ -21,7 +21,7 @@ export const App = () => {
         <VscNotebook size={400} style={{ marginTop: '60px' }} />
         <Container>
           <PhonebookName>Phonebook</PhonebookName>
-          <ContactsForm />
+          <ContactForm />
 
           <ContactFilter>
             <Contacts>Contacts</Contacts>

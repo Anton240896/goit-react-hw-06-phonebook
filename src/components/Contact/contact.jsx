@@ -17,5 +17,3 @@ export const Contact = ({ id, name, number }) => {
     </ContactContainer>
   );
 };
-
-console.log();

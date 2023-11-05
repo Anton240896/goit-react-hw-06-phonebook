@@ -10,8 +10,8 @@ export const Container = styled.section`
 
   svg {
     position: absolute;
-    top: 100px;
-    left: 795px;
+    top: 198px;
+    left: 432px;
   }
 `;
 

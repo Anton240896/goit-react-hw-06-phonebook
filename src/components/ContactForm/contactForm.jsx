@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 // import { useState } from 'react';
 
 import { addContact } from 'redux/contactSlice';
-import { Button, LabelStyled, Input } from './contactForm.styled';
+import { Button, LabelStyled } from './contactForm.styled';
 import { HiPhoneOutgoing } from 'react-icons/hi';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';

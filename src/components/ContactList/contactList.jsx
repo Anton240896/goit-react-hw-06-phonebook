@@ -1,10 +1,11 @@
 import { Contact } from 'components/Contact/contact';
 import { ContactListStyled } from './contactList.styled';
+import { getFilters, getContacts } from 'redux/selectors';
 import { useSelector } from 'react-redux';
 
 export const ContactList = () => {
-  const contacts = useSelector(state => state.contacts);
-  const filter = useSelector(state => state.filter.filter);
+  const contacts = useSelector(getContacts);
+  const filter = useSelector(getFilters);
 
   const filterContacts = () => {
     return contacts.filter(contact =>
@@ -20,25 +21,6 @@ export const ContactList = () => {
     </ContactListStyled>
   );
 };
-
-// import { Contact } from 'components/Contact/contact';
-// import { ContactListStyled } from './contactList.styled';
-
-// export const ContactList = ({ contactsBook, deleteContact }) => {
-//   return (
-//     // <ContactListStyled>
-//     //   {contactsBook.map(({ id, name, number }) => (
-//     //     <Contact
-//     //       key={id}
-//     //       id={id}
-//     //       name={name}
-//     //       phone={number}
-//     //       deleteContact={deleteContact}
-//     //     />
-//     //   ))}
-//     // </ContactListStyled>
-//   );
-// };
 
 /*======== REDUX =======*/
 // export const ContactList = () => {

@@ -1,34 +1,26 @@
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
 import { App } from 'components/App';
-import { store } from './redux/store';
+import { Provider } from 'react-redux';
+import { store, persistor } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import { ThemeProvider } from 'styled-components';
 import './index.css';
 
+const theme = {
+  colors: {
+    error: 'red',
+  },
+};
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <React.StrictMode>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <App />
+        </PersistGate>
+      </Provider>
+    </ThemeProvider>
+  </React.StrictMode>
 );
-
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-
-// // import { ThemeProvider } from 'styled-components';
-// import { App } from 'components/App';
-// // import { Globalstyles } from 'components/GlobalStyles';
-// // import { Provider } from 'react-redux';
-
-// // import { store } from 'redux/store';
-
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   // <Provider store={store}>
-//     {/* <ThemeProvider theme={theme}> */}
-//      <React.StrictMode>
-
-//     <App />
-//     /* <Globalstyles /> */
-//     /* </ThemeProvider> */
-//   /* // </Provider> */
-//    </React.StrictMode>
-
-// );
